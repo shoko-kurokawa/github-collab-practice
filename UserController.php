@@ -19,7 +19,7 @@ class UserController extends Controller
         $validated = $request->validate([
             'name' => 'required|max:50',
             'email' => 'required|email|unique:users',
-            'passwodr' => 'required|min:8',
+            'password' => 'required|min:8',
         ]);
 
         User::create([
